@@ -38,9 +38,9 @@ export class WordService {
       if(found) {
         found.clasifications.noSpam++;
       }else {
-        const n = new Word(word);
-        n.clasifications.noSpam++;
-        this.dictionary.push(n);
+        found = new Word(word);
+        found.clasifications.noSpam++;
+        this.dictionary.push(found);
       }
     });
 
@@ -55,6 +55,7 @@ export class WordService {
         found.clasifications.spam++;
       }else {
         found = new Word(word);
+        found.clasifications.spam++;
         this.dictionary.push(found);
       }
     });
