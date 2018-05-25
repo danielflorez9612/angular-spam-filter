@@ -25,6 +25,7 @@ export class WordService {
         this.noSpam(v[0]);
       }
     });
+    console.log(this.dictionary);
   }
   static getWords(text:string) {
     return text.split(' ').filter(value => value.length>2);
