@@ -18,7 +18,7 @@ export class WordService {
       ['Disponga de sus productos farmaceuticos en 24 horas', 'spam'],
       ['La inteligencia artificial es una disciplina muy interesante', 'noSpam']
     ];
-    this.texts.forEach(v => {
+    texts.forEach(v => {
       if(v[1]==='spam') {
         this.spam(v[0]);
       }else {
