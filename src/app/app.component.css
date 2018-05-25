@@ -1,0 +1,19 @@
+button {
+  cursor: pointer;
+}
+.container {
+  position: absolute;
+  top: 25%;
+  display: block;
+  width: 100%;
+  padding: 0 10vw;
+}
+textarea {
+  height: 20vh;
+}
+.row {
+  margin-bottom: 10px;
+}
+.btn-group, .btn-group-vertical, .dropdown-menu {
+  width: 100%;
+}
