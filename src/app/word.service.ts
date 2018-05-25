@@ -75,9 +75,9 @@ export class WordService {
           const conditionProbability = wordProbability/categoryProbability;
           totalProbability *=(conditionProbability * wordProbability) / categoryProbability;
         }
-        if (probability<=totalProbability) {
+        if (probability<totalProbability) {
           category = cat;
-          probability = 1-categoryProbability;
+          probability = categoryProbability;
         }
       }
     }
