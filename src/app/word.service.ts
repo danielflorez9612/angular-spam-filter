@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class WordService {
 
   dictionary;
-  sampleTexts;
+  sampleTexts=[];
   categories = {
     spam: 0,
     noSpam: 0
