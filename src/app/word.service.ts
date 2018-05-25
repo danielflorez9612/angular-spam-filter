@@ -13,10 +13,10 @@ export class WordService {
     this.dictionary = [];
     this.sampleTexts=[
       ['Viagra a buen precio','spam'],
-      ['Quedamos mañana lunes para ir al cine', 'noSpam'],
+      ['Quedamos mañana lunes para ir al cine', 'spam'],
       ['Replicas de relojes y viagra a precios de risa', 'spam'],
       ['Disponga de sus productos farmaceuticos en 24 horas', 'spam'],
-      ['La inteligencia artificial es una disciplina muy interesante', 'noSpam']
+      ['La inteligencia artificial es una disciplina muy interesante', 'spam']
     ];
     this.sampleTexts.forEach(v => {
       if(v[1]==='spam') {
