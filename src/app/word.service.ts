@@ -11,14 +11,14 @@ export class WordService {
   };
   constructor() {
     this.dictionary = [];
-    this.sampleTexts=[
+    let texts=[
       ['Viagra a buen precio','spam'],
       ['Quedamos mañana lunes para ir al cine', 'spam'],
       ['Replicas de relojes y viagra a precios de risa', 'noSpam'],
       ['Disponga de sus productos farmaceuticos en 24 horas', 'spam'],
       ['La inteligencia artificial es una disciplina muy interesante', 'noSpam']
     ];
-    this.sampleTexts.forEach(v => {
+    this.texts.forEach(v => {
       if(v[1]==='spam') {
         this.spam(v[0]);
       }else {
