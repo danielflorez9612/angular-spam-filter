@@ -14,9 +14,9 @@ export class WordService {
     this.sampleTexts=[
       ['Viagra a buen precio','spam'],
       ['Quedamos mañana lunes para ir al cine', 'spam'],
-      ['Replicas de relojes y viagra a precios de risa', 'spam'],
+      ['Replicas de relojes y viagra a precios de risa', 'noSpam'],
       ['Disponga de sus productos farmaceuticos en 24 horas', 'spam'],
-      ['La inteligencia artificial es una disciplina muy interesante', 'spam']
+      ['La inteligencia artificial es una disciplina muy interesante', 'noSpam']
     ];
     this.sampleTexts.forEach(v => {
       if(v[1]==='spam') {
@@ -37,9 +37,9 @@ export class WordService {
       if(found) {
         found.clasifications.noSpam++;
       }else {
-        found = new Word(word);
-        found.clasifications.noSpam++;
-        this.dictionary.push(found);
+        const n = new Word(word);
+        n.clasifications.noSpam++;
+        this.dictionary.push(n);
       }
     });
 
