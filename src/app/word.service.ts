@@ -31,6 +31,7 @@ export class WordService {
   }
   noSpam(phrase: string) {
     this.categories.noSpam++;
+    this.sampleTexts.push([phrase,'noSpam']);
     WordService.getWords(phrase).forEach(word => {
       let found = this.dictionary.find(value => value.word.toLowerCase() === word.toLowerCase());
       if(found) {
@@ -46,6 +47,7 @@ export class WordService {
 
   spam(phrase: string) {
     this.categories.spam++;
+    this.sampleTexts.push([phrase,'spam']);
     WordService.getWords(phrase).forEach(word => {
       let found = this.dictionary.find(value => value.word.toLowerCase() === word.toLowerCase());
       if(found) {
